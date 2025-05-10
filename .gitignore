@@ -1,3 +1,5 @@
 envetudiant/
 .env
 __pycache__/
+*.pyc
+instance/

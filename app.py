@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, abort
 from models import db, Etudiant
 from config import Config
+import os
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -15,8 +16,9 @@ with app.app_context():
 @app.route('/')
 def index():
     return jsonify({
-        'message': 'Bienvenue sur l\'API de gestion des étudiants',
+        'message': 'Bienvenue sur l\'API de gestion des étudiants - v1.1',
         'endpoints': {
+            'GET /info': 'Informations sur l\'API',
             'GET /etudiants': 'Liste tous les étudiants',
             'GET /etudiants/:id': 'Détails d\'un étudiant',
             'POST /etudiants': 'Créer un nouvel étudiant',
@@ -99,6 +101,19 @@ def supprimer_etudiant(etudiant_id):
     db.session.commit()
     
     return jsonify({'message': f'Étudiant avec ID {etudiant_id} supprimé avec succès'})
+
+
+# Ajouter cette nouvelle route
+@app.route('/info', methods=['GET'])
+def api_info():
+    return jsonify({
+        'nom': 'API Gestion Étudiants',
+        'version': '1.1.0',
+        'auteur': 'Votre Nom',
+        'date': '10 mai 2025',
+        'description': 'API CRUD pour la gestion des étudiants',
+        'environnement': 'Production' if os.getenv('RAILWAY_ENVIRONMENT') else 'Développement'
+    })
 
 # Pour gérer les erreurs 404
 @app.errorhandler(404)
