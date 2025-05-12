@@ -18,7 +18,3 @@ Application de gestion des étudiants développée avec Flask et déployée sur 
 ## Comment tester
 1. Endpoints disponibles dans la documentation de l'API
 2. Utilisez Postman ou curl pour tester les requêtes
-
-## Développeurs
-- [Votre Nom]
-- [Votre Email]
