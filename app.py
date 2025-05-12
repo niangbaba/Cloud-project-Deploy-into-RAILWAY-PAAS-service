@@ -120,5 +120,8 @@ def api_info():
 def ressource_non_trouvee(e):
     return jsonify({'error': 'Ressource non trouvée'}), 404
 
+# if __name__ == '__main__':
+#     app.run(debug=True)
+    
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
