@@ -23,7 +23,7 @@ def index():
             'GET /etudiants/:id': 'Détails d\'un étudiant',
             'POST /etudiants': 'Créer un nouvel étudiant',
             'PUT /etudiants/:id': 'Mettre à jour un étudiant',
-            # 'DELETE /etudiants/:id': 'Supprimer un étudiant'
+            'DELETE /etudiants/:id': 'Supprimer un étudiant'
         }
     })
 
