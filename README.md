@@ -13,7 +13,7 @@ Application de gestion des étudiants développée avec Flask et déployée sur 
 - API RESTful
 
 ## Lien de Déploiement
-🌐 Lien Railway: https://votre-projet-nom.railway.app
+🌐 Lien Railway: https://web-production-0318b.up.railway.app
 
 ## Comment tester
 1. Endpoints disponibles dans la documentation de l'API
