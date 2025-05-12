@@ -93,14 +93,14 @@ def mettre_a_jour_etudiant(etudiant_id):
     
     return jsonify(etudiant.to_dict())
 
-# # Supprimer un étudiant
-# @app.route('/etudiants/<int:etudiant_id>', methods=['DELETE'])
-# def supprimer_etudiant(etudiant_id):
-#     etudiant = Etudiant.query.get_or_404(etudiant_id)
-#     db.session.delete(etudiant)
-#     db.session.commit()
+# Supprimer un étudiant
+@app.route('/etudiants/<int:etudiant_id>', methods=['DELETE'])
+def supprimer_etudiant(etudiant_id):
+    etudiant = Etudiant.query.get_or_404(etudiant_id)
+    db.session.delete(etudiant)
+    db.session.commit()
     
-#     return jsonify({'message': f'Étudiant avec ID {etudiant_id} supprimé avec succès'})
+    return jsonify({'message': f'Étudiant avec ID {etudiant_id} supprimé avec succès'})
 
 
 # Ajouter cette nouvelle route
