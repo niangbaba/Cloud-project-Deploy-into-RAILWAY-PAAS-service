@@ -143,7 +143,7 @@ with app.app_context():
 @app.route('/')
 def index():
     return jsonify({
-        'message': 'Bienvenue sur l\'API de gestion des étudiants - v1.1',
+        'message': 'Bienvenue sur l\'API de gestion des étudiants de l\'ecole polytechnique de thies - v1.1',
         'endpoints': {
             'GET /info': 'Informations sur l\'API',
             'GET /etudiants': 'Liste tous les étudiants',
